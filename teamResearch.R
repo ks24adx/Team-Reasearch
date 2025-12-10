@@ -45,4 +45,5 @@ colSums(is.na(uni))
 
 head(uni)
 summary(uni)
+#handled the missing values
 

@@ -1,5 +1,14 @@
+# =============================================================================
+# 0. PACKAGE INSTALLATION AND LOADING
+# =============================================================================
 
-# Load required library (ggplot2 only plots will use base R)
+# Install ggplot2 if not already installed
+if (!require(ggplot2, quietly = TRUE)) {
+  install.packages("ggplot2")
+  library(ggplot2)
+}
+
+# Check if ggplot2 is available
 has_ggplot <- require(ggplot2, quietly = TRUE)
 
 # =============================================================================
@@ -75,12 +84,6 @@ cat("Total:", nrow(data_filtered), "\n")
 cat("\n=============================================================================\n")
 cat("DESCRIPTIVE STATISTICS\n")
 cat("=============================================================================\n")
-
-# Count frequencies
-table(uni$University.Rank)
-
-# Proportions
-prop.table(table(uni$University.Rank))
 
 # Calculate statistics for US
 us_data <- data_filtered$OverAll.Score.Clean[data_filtered$Country == "United States"]
@@ -402,4 +405,3 @@ if (t_test_result$p.value < 0.05) {
 cat("\n=============================================================================\n")
 cat("Analysis complete. Plots saved in 'plots/' directory.\n")
 cat("=============================================================================\n")
-

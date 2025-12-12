@@ -76,6 +76,12 @@ cat("\n=========================================================================
 cat("DESCRIPTIVE STATISTICS\n")
 cat("=============================================================================\n")
 
+# Count frequencies
+table(uni$University.Rank)
+
+# Proportions
+prop.table(table(uni$University.Rank))
+
 # Calculate statistics for US
 us_data <- data_filtered$OverAll.Score.Clean[data_filtered$Country == "United States"]
 us_stats <- c(

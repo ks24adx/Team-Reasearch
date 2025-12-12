@@ -1,5 +1,3 @@
-This is a Team reseach based on World University Ranking 2023.
-
 ## Comparison of Overall Scores Between US and UK Universities
 
 ### **1. Overview**
